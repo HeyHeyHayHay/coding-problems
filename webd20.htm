@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head  class="center">
+<title>Dice Roll</title>
+<style>
+
+.center {
+  text-align: center;
+}
+
+</style>
+</head>
+<body  class="center">
+
+<h1>Roll d20</h1>
+<p>Roll a d20</p>
+
+
+<button onclick="myFunction()"  class="center" >Roll d20</button>
+
+<p id="demo"></p>
+
+<script  class="center">
+function myFunction() {
+
+  let randnum = Math.random();
+
+  let d20 = Math.ceil(randnum*20);
+
+  document.getElementById("demo").innerHTML = d20;
+
+
+}
+</script>
+</body>
+</html>

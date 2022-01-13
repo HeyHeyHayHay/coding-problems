@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head  class="center">
+<title>Prime List</title>
+<style>
+
+.center {
+  text-align: center;
+}
+
+</style>
+</head>
+<body  class="center">
+
+<h1>List of Primes</h1>
+<p>The first 10000 primes</p>
+
+<p id="demo"></p>
+
+
+<script>
+
+
+function primeFunction(){
+
+  let listPrimes = [2];
+  let amount = 1;
+  let testPrime = 3;
+
+  while (amount < 10000){
+    let primeTrueFalse = true;
+    let testFactor = 2;
+    while (testFactor < testPrime){
+      if (testPrime%testFactor == 0){
+        primeTrueFalse = false;
+      };
+      testFactor++;
+    };
+        if (primeTrueFalse == true){
+          listPrimes.push(testPrime);
+          amount++;
+        };
+    testPrime++;
+  };
+
+
+  var listPrimesString = listPrimes.join(', ');
+
+  document.getElementById("demo").innerHTML = listPrimesString;
+
+
+}
+
+
+primeFunction()
+
+</script>
+
+</body>
+</html>
